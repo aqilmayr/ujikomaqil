@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('detail_penjualans', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInterger('PenjualanId');
+            $table->unsignedBigInterger('ProdukId');
+            $table->interger('JumlahProduk');
+            $table->decimal('Subtotal', 10, 2);
             $table->timestamps();
         });
     }
